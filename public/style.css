@@ -1,0 +1,606 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.section-1 {
+  background: linear-gradient(90deg, rgb(34, 89, 50) 0%, rgb(12, 53, 35) 50%, rgb(34, 89, 50) 100%);
+  padding: 30px;
+  width: 100%;
+  /* height:100svh; */
+}
+.section-1 .banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+.section-1 .banner .left-span {
+  color: rgb(251, 240, 224);
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.section-1 .banner .left-span .title-1 {
+  font-size: 60px;
+  margin: 20px;
+}
+.section-1 .banner .left-span .description {
+  font-family: "Elms Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin: 20px;
+}
+.section-1 .banner .left-span .buttons {
+  font-family: "Elms Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #e65e3f;
+  padding: 10px;
+  width: fit-content;
+  border-radius: 25px;
+  color: rgb(251, 240, 224);
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.section-1 .banner .left-span .buttons:hover {
+  background-color: #c8543a;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 30px;
+  color: rgb(251, 240, 224);
+}
+.header .logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header .logo-container .logo {
+  height: 40px;
+}
+.header .logo-container .site-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+.header .main-menu {
+  display: flex;
+  gap: 20px;
+  font-family: "Elms Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.header .main-menu .menu-items {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.header .main-menu .menu-items a {
+  text-decoration: none;
+  color: rgb(251, 240, 224);
+  font-size: 20px;
+}
+.header .main-menu .menu-items a:hover {
+  color: rgb(211, 202, 187);
+}
+.header .right-span {
+  display: flex;
+  gap: 15px;
+}
+.header .right-span a img {
+  width: 25px;
+  height: 25px;
+}
+.header .menu-toggle {
+  display: none;
+}
+.header .hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.header .hamburger span {
+  width: 25px;
+  height: 3px;
+  background: rgb(251, 240, 224);
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+.lower-banner {
+  font-family: "Elms Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: rgb(12, 53, 35);
+  color: rgb(251, 240, 224);
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+.lower-banner .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.lower-banner .content img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+.lower-banner .content .title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.lower-banner .content .description {
+  font-size: 16px;
+  margin: 0;
+}
+
+.card-display {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.card-display .card {
+  background-color: #dddddb;
+  border-radius: 25px;
+  width: fit-content;
+  margin: 50px;
+  padding: 25px;
+  display: flex;
+  flex-direction: row;
+}
+.card-display .card .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+.card-display .card .tag {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  color: rgb(12, 53, 35);
+}
+.card-display .card .title {
+  font-family: "Elms Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+}
+.card-display .card .link {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: #e65e3f;
+  text-decoration: underline;
+}
+.card-display .card .plant-img {
+  object-fit: contain;
+  width: 85%;
+  height: auto;
+}
+
+.products-gallery {
+  text-align: center;
+  padding: 20px;
+}
+.products-gallery .title {
+  font-size: 40px;
+  color: rgb(12, 53, 35);
+}
+.products-gallery .products-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.products-gallery .products-container .tags {
+  grid-column: 1/-1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 10px 0 10px 0;
+}
+.products-gallery .products-container .tags .tag-element {
+  background: rgb(12, 53, 35);
+  color: rgb(251, 240, 224);
+  border-radius: 25px;
+  padding: 8px 20px;
+  margin: 5px;
+  text-decoration: none;
+}
+.products-gallery .products-container .tags .tag-element:hover {
+  background: none;
+  color: rgb(12, 53, 35);
+  border: 2px solid rgb(12, 53, 35);
+}
+.products-gallery .products-container .card {
+  font-family: "Elms Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  border-radius: 25px;
+  padding: 10px;
+  transition: background-color 0.5s;
+}
+.products-gallery .products-container .card .img-container {
+  background-color: #dddddb;
+  padding: 10px;
+  border-radius: 20px;
+}
+.products-gallery .products-container .card .img-container:hover {
+  background-color: #a6fa7b;
+}
+.products-gallery .products-container .card .card-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.products-gallery .products-container .card .card-text {
+  text-align: left;
+  padding: 10px;
+}
+.products-gallery .products-container .card .card-text .label {
+  color: rgb(12, 53, 35);
+}
+.products-gallery .products-container .card .card-text .price {
+  color: #e65e3f;
+}
+
+.info-banner {
+  background-color: rgb(12, 53, 35);
+  color: rgb(251, 240, 224);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 90px 0;
+  padding: 30px 100px;
+}
+.info-banner .title {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 35px;
+}
+.info-banner .banner-img {
+  display: flex;
+  justify-content: center;
+  width: 800px;
+}
+.info-banner .banner-img img {
+  border: 2px solid rgb(12, 53, 35);
+  border-radius: 100%;
+}
+.info-banner .right-span .description {
+  font-family: "Elms Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.info-banner .right-span .btn {
+  background-color: #e65e3f;
+  padding: 10px;
+  width: fit-content;
+  border-radius: 25px;
+  color: rgb(251, 240, 224);
+  font-family: "Elms Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(251, 240, 224);
+  font-size: 20px;
+}
+
+.care-container {
+  text-align: center;
+}
+.care-container .title {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 40px;
+  color: rgb(12, 53, 35);
+  padding: 30px;
+}
+.care-container .description-1 {
+  font-family: "Elms Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+.care-container .care-tips {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  padding: 50px;
+}
+.care-container .care-tips .tip {
+  text-align: center;
+  width: 300px;
+  font-family: "Elms Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.care-container .care-tips .tip .care-icon {
+  background-color: rgb(12, 53, 35);
+  border-radius: 100%;
+  padding: 15px;
+}
+.care-container .care-tips .tip .subtitle {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px;
+}
+.care-container .care-tips .tip .description-2 {
+  font-size: 18px;
+}
+
+.info-card {
+  background-color: #dddddb;
+  display: flex;
+  justify-self: center;
+  width: 60%;
+  border-radius: 25px;
+}
+.info-card .info-card-img {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+.info-card .content {
+  padding: 30px;
+  font-size: 20px;
+  width: fit-content;
+}
+.info-card .content .title {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 30px;
+}
+.info-card .content .description {
+  font-family: "Elms Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin: 10px 0;
+}
+.info-card .content .btn {
+  background-color: #e65e3f;
+  padding: 10px;
+  width: fit-content;
+  border-radius: 25px;
+  color: rgb(251, 240, 224);
+  font-family: "Elms Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(251, 240, 224);
+  font-size: 20px;
+}
+
+.instagram-banner {
+  background-color: #dddddb;
+  text-align: center;
+  margin: 50px 0 0;
+  padding: 30px 0;
+}
+.instagram-banner .title {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: rgb(12, 53, 35);
+  font-size: 30px;
+  margin: 10px 0;
+}
+.instagram-banner .ig-img {
+  margin: 0 10px;
+  border-radius: 25px;
+}
+
+.footer-banner {
+  font-family: "Elms Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(251, 240, 224);
+  background-color: rgb(12, 53, 35);
+  height: fit-content;
+  text-align: center;
+  padding: 30px;
+}
+.footer-banner p,
+.footer-banner img,
+.footer-banner footer {
+  margin: 5px 0 5px 0;
+}
+
+.img-container .like-btn {
+  float: right;
+  padding: 10px;
+  background-color: #cdf7ab;
+  border-radius: 100%;
+}
+
+@media (max-width: 776px) {
+  .section-1 .main-menu {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  .section-1 .main-menu a {
+    font-size: 20px;
+    padding: 10px 0;
+  }
+  .section-1 .hamburger {
+    display: flex;
+  }
+  .section-1 .menu-toggle:checked + .hamburger + .main-menu {
+    display: flex;
+  }
+  .section-1 .right-span {
+    margin-top: 10px;
+  }
+  .section-1 .header {
+    justify-content: space-between;
+  }
+  .section-1 .banner .left-span {
+    width: 65%;
+  }
+  .section-1 .banner .left-span .title-1 {
+    font-size: 35px;
+  }
+  .section-1 .banner .left-span .description {
+    font-size: small;
+  }
+  .section-1 .banner .banner-img {
+    object-fit: contain;
+    width: 60%;
+    height: auto;
+  }
+  .lower-banner {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  .lower-banner .content .title {
+    font-size: 18px;
+  }
+  .lower-banner .content .description {
+    font-size: 12px;
+  }
+  .lower-banner .content img {
+    width: 40px;
+    height: 40px;
+  }
+  .card-display .card {
+    margin: 20px;
+  }
+  .card-display .card .card-content {
+    gap: 20px;
+  }
+  .card-display .card .card-content .tag,
+  .card-display .card .card-content .link {
+    font-size: 12px;
+  }
+  .card-display .card .card-content .title {
+    font-size: 20px;
+  }
+  .card-display .card .plant-img {
+    width: 100%;
+    height: auto;
+  }
+  .products-gallery .products-container {
+    grid-template-columns: repeat(2, 1fr);
+    width: 95%;
+  }
+  .products-gallery .tags {
+    grid-column: 1/4;
+    margin: 15px 0;
+  }
+  .products-gallery .tags .tag-element {
+    font-size: 10px;
+  }
+  .products-gallery .card .img-container {
+    display: flex;
+    font-family: "Elms Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    justify-content: center;
+  }
+  .products-gallery .card .img-container .card-img {
+    align-self: center;
+    justify-self: center;
+    width: 150px;
+    height: 150px;
+  }
+  .products-gallery .card .img-container .like-btn {
+    display: none;
+  }
+  .info-banner {
+    padding: 20px 30px;
+  }
+  .info-banner .title {
+    font-size: 20px;
+    width: 450px;
+  }
+  .info-banner .right-span {
+    padding-left: 10px;
+  }
+  .info-banner .right-span .description,
+  .info-banner .right-span .btn {
+    font-size: 10px;
+  }
+  .care-container .care-tips {
+    flex-direction: column;
+    align-items: center;
+  }
+  .care-container .care-tips .tip {
+    margin: 20px 0;
+  }
+  .info-card {
+    flex-direction: column;
+    width: 75%;
+    height: auto;
+  }
+  .info-card .content .info-card-img {
+    border-radius: 0;
+    border-top-right-radius: 25px;
+  }
+  .info-card .content .title {
+    font-size: 20px;
+  }
+  .info-card .content .description {
+    font-size: 15px;
+  }
+  .info-card .content .btn {
+    font-size: 15px;
+  }
+  .instagram-banner .images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2);
+    margin: 0 10px;
+    gap: 10px 5px;
+  }
+  .instagram-banner .images .ig-img {
+    width: 200px;
+    justify-self: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
