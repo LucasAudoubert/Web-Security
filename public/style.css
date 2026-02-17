@@ -64,7 +64,6 @@
 .section-1 .banner .left-span .buttons:hover {
   background-color: #c8543a;
 }
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -129,7 +128,6 @@
   margin: 4px 0;
   transition: 0.3s;
 }
-
 .lower-banner {
   font-family: "Elms Sans", sans-serif;
   font-optical-sizing: auto;
@@ -212,7 +210,6 @@
   width: 85%;
   height: auto;
 }
-
 .products-gallery {
   text-align: center;
   padding: 20px;
@@ -282,7 +279,6 @@
 .products-gallery .products-container .card .card-text .price {
   color: #e65e3f;
 }
-
 .info-banner {
   background-color: rgb(12, 53, 35);
   color: rgb(251, 240, 224);
@@ -451,13 +447,11 @@
   text-align: center;
   padding: 30px;
 }
-
 .footer-banner p,
 .footer-banner img,
 .footer-banner footer {
   margin: 5px 0 5px 0;
 }
-
 .img-container .like-btn {
   float: right;
   padding: 8px;
@@ -469,13 +463,11 @@
   align-items: center;
   justify-content: center;
 }
-
 .img-container .like-btn img {
   width: 25px;
   height: 25px;
   display: block;
 }
-
 .img-container .like-btn:focus {
   outline: none;
   box-shadow: none;
