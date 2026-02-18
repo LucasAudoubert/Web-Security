@@ -1,21 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
 
 .section-1 {
-  background: linear-gradient(90deg, rgb(34, 89, 50) 0%, rgb(12, 53, 35) 50%, rgb(34, 89, 50) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(34, 89, 50) 0%,
+    rgb(12, 53, 35) 50%,
+    rgb(34, 89, 50) 100%
+  );
   padding: 30px;
+  padding-right: 50px;
+  padding-left: 50px;
   width: 100%;
   /* height:100svh; */
 }
 .section-1 .banner {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 200px;
 }
 .section-1 .banner .left-span {
   color: rgb(251, 240, 224);
@@ -428,7 +440,6 @@
   margin: 0 10px;
   border-radius: 25px;
 }
-
 .footer-banner {
   font-family: "Elms Sans", sans-serif;
   font-optical-sizing: auto;
@@ -440,6 +451,7 @@
   text-align: center;
   padding: 30px;
 }
+
 .footer-banner p,
 .footer-banner img,
 .footer-banner footer {
@@ -448,9 +460,25 @@
 
 .img-container .like-btn {
   float: right;
-  padding: 10px;
+  padding: 8px;
   background-color: #cdf7ab;
-  border-radius: 100%;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-container .like-btn img {
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+
+.img-container .like-btn:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 @media (max-width: 776px) {

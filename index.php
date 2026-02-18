@@ -124,7 +124,7 @@
         <div class="card">
           <div class="img-container">
             <button class="like-btn">
-              <img src="./public/icons/heart.png" alt="" />
+              <img src="./public/icons/cart.png" alt="" />
             </button>
             <img src="./public/plants/plant-1.png" class="card-img" alt="" />
           </div>
@@ -137,7 +137,7 @@
         <div class="card">
           <div class="img-container">
             <button class="like-btn">
-              <img src="./public/icons/heart.png" alt="" />
+              <img src="./public/icons/cart.png" alt="" />
             </button>
             <img src="./public/plants/plant-1.png" class="card-img" alt="" />
           </div>
@@ -150,7 +150,7 @@
         <div class="card">
           <div class="img-container">
             <button class="like-btn">
-              <img src="./public/icons/heart.png" alt="" />
+              <img src="./public/icons/cart.png" alt="" />
             </button>
             <img src="./public/plants/plant-1.png" class="card-img" alt="" />
           </div>
@@ -163,7 +163,7 @@
         <div class="card">
           <div class="img-container">
             <button class="like-btn">
-              <img src="./public/icons/heart.png" alt="" />
+              <img src="./public/icons/cart.png" alt="" />
             </button>
             <img src="./public/plants/plant-1.png" class="card-img" alt="" />
           </div>
@@ -176,7 +176,7 @@
         <div class="card">
           <div class="img-container">
             <button class="like-btn">
-              <img src="./public/icons/heart.png" alt="" />
+              <img src="./public/icons/cart.png" alt="" />
             </button>
             <img src="./public/plants/plant-1.png" class="card-img" alt="" />
           </div>
@@ -189,7 +189,7 @@
         <div class="card">
           <div class="img-container">
             <button class="like-btn">
-              <img src="./public/icons/heart.png" alt="" />
+              <img src="./public/icons/cart.png" alt="" />
             </button>
             <img src="./public/plants/plant-1.png" class="card-img" alt="" />
           </div>
