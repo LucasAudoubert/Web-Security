@@ -10,15 +10,15 @@
     <div class="banner">
         <div class="auth-card">
             <h1>Inscription</h1>
-            <form method="post" action="user_controller.php">
-                <input type="text" name="prenom" placeholder="Prénom" required class="input-field">
-                <input type="text" name="nom" placeholder="Nom" required class="input-field">
+            <form method="post" action="../controller/user/signup.php">
+                <input type="text" name="fName" placeholder="Prénom" required class="input-field">
+                <input type="text" name="lName" placeholder="Nom" required class="input-field">
                 <input type="email" name="email" placeholder="Email" required class="input-field">
-                <input type="password" name="motdepasse" placeholder="Mot de passe" required class="input-field">
+                <input type="password" name="pass" placeholder="Mot de passe" required class="input-field">
                 <button type="submit" name="signup" class="btn-primary">S'inscrire</button>
             </form>
 
-            <a href="user_controller.php" class="auth-link">Déjà un compte ? Se connecter</a>
+            <a href="./login.php" class="auth-link">Déjà un compte ? Se connecter</a>
         </div>
     </div>
 </div>

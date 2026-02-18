@@ -11,13 +11,13 @@
         <div class="auth-card">
             <h1>Connexion</h1>
 
-            <form method="post" action="user_controller.php">
+            <form method="post" action="../controller/user/login.php">
                 <input type="email" name="email" placeholder="Email" required class="input-field">
-                <input type="password" name="motdepasse" placeholder="Mot de passe" required class="input-field">
+                <input type="password" name="pass" placeholder="Mot de passe" required class="input-field">
                 <button type="submit" name="login" class="btn-primary">Se connecter</button>
             </form>
 
-            <a href="signup_view.php" class="auth-link">Pas de compte ? S'inscrire</a>
+            <a href="./signup.php" class="auth-link">Pas de compte ? S'inscrire</a>
         </div>
     </div>
 </div>
