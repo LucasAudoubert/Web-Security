@@ -4,9 +4,9 @@ require_once __DIR__ . '/../../model/plant_model.php';
 
 session_start();
 
-// Vérifier que l'utilisateur est connecté et est admin
+// Vérifier que l'utilisateur est connecté
 if (!isset($_SESSION['user_id'])) {
-    header('Location: /view/login.php');
+    header('Location: ../../view/login.php');
     exit;
 }
 
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (empty($name) || empty($description) || $price <= 0 || $stock < 0) {
         $_SESSION['error'] = 'Tous les champs obligatoires doivent être remplis correctement.';
-        header('Location: /view/admin.php');
+        header('Location: ../../view/admin.php');
         exit;
     }
 
@@ -31,6 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['error'] = 'Erreur lors de l\'ajout de la plante.';
     }
 
-    header('Location: /view/admin.php');
+    header('Location: ../../view/admin.php');
     exit;
 }

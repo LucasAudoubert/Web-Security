@@ -1,14 +1,27 @@
+@import '../style.css';
+
 .admin-container {
   max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
 }
+
+/* Override body height from forms.css to allow scrolling */
+body {
+  height: auto;
+  display: block;
+  flex-direction: unset;
+  justify-content: unset;
+  align-items: unset;
+}
+
 .admin-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
   color: rgb(12, 53, 35);
+  position: static;
 }
 .admin-section {
   background: #f9fafb;

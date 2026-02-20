@@ -2,8 +2,9 @@
 session_start();
 require_once("../../model/user_model.php");
 
-if (isset($_SESSION['userID'])) {
-    header("Location: http://localhost/Web%20Security%20Project/");
+if (isset($_SESSION['user_id'])) {
+    $redirect = $_GET['redirect_to'] ?? 'http://localhost/Web%20Security%20Project/';
+    header("Location: $redirect");
     exit();
 }
 
@@ -23,19 +24,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (!empty($user)) {
 
-        $_SESSION['userID'] = $user['id']; 
+        $_SESSION['user_id'] = $user['id'];
 
-        echo "<p>Login successful</p>";
-    var_dump($_SESSION);
-        header("Location: http://localhost/Web%20Security%20Project/");
-        // exit();
-
+        $redirect = $_GET['redirect_to'] ?? 'http://localhost/Web%20Security%20Project/';
+        header("Location: $redirect");
+        exit();
     } else {
-
         echo "Incorrect credentials";
-
-        // session_unset();
-        // session_destroy();
         exit();
     }
 }
