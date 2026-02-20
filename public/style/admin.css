@@ -6,7 +6,6 @@
   padding: 20px;
 }
 
-/* Override body height from forms.css to allow scrolling */
 body {
   height: auto;
   display: block;
@@ -76,7 +75,7 @@ body {
   color: white;
 }
 .btn-primary:hover {
-  background-color: #c8543a;
+  background-color: #3ac846;
 }
 .btn-danger {
   background-color: #dc2626;

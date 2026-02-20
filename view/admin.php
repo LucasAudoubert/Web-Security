@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// Rediriger vers login si pas connecté
+// vers login si pas connecté
 if (!isset($_SESSION['user_id'])) {
     $_SESSION['redirect_after_login'] = 'http://localhost/Web%20Security%20Project/view/admin.php';
     header('Location: ./login.php?redirect_to=' . urlencode('http://localhost/Web%20Security%20Project/view/admin.php'));
@@ -15,7 +15,7 @@ $pdo = connectDB();
 $plants = getAllPlants($pdo);
 $users = getAllUsers($pdo);
 
-// Afficher les messages de succès/erreur
+// messages de succès/erreur
 $success = $_SESSION['success'] ?? null;
 $error = $_SESSION['error'] ?? null;
 unset($_SESSION['success'], $_SESSION['error']);
@@ -50,9 +50,8 @@ unset($_SESSION['success'], $_SESSION['error']);
             </div>
         <?php endif; ?>
 
-        <!-- Section Ajouter Plante -->
         <div class="admin-section">
-            <h2>➕ Ajouter une Nouvelle Plante</h2>
+            <h2>Ajouter une Nouvelle Plante</h2>
             <form method="POST" action="../controller/plant/add.php" enctype="multipart/form-data">
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
                     <div class="form-group">
@@ -84,9 +83,8 @@ unset($_SESSION['success'], $_SESSION['error']);
             </form>
         </div>
 
-        <!-- Section Gestion Plantes -->
         <div class="admin-section">
-            <h2>🌱 Gestion des Plantes</h2>
+            <h2>Gestion des Plantes</h2>
             <div class="table-wrapper">
                 <table>
                     <thead>
@@ -125,9 +123,8 @@ unset($_SESSION['success'], $_SESSION['error']);
             <?php endif; ?>
         </div>
 
-        <!-- Section Gestion Utilisateurs -->
         <div class="admin-section">
-            <h2>👥 Gestion des Utilisateurs</h2>
+            <h2>Gestion des Utilisateurs</h2>
             <div class="table-wrapper">
                 <table>
                     <thead>
