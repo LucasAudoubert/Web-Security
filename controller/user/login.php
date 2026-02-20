@@ -29,8 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         echo "Incorrect credentials";
 
-        session_unset();
-        session_destroy();
+        // session_unset();
+        // session_destroy();
         exit();
     }
 }

@@ -1,3 +1,6 @@
+<?php require_once __DIR__ . '/controller/plant/display.php'; ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,18 +30,8 @@
         <nav class="main-menu">
           <div class="menu-items">
             <a href="">Home</a>
-            <a href="">Shop</a>
-            <a href="">About</a>
-            <a href="">Blog</a>
-            <a href="">Contact</a>
-          </div>
-
-          <div class="right-span">
-            <a href=""
-              ><img src="./public/icons/bag.png" alt="shopping-cart"
-            /></a>
-            <a href=""><img src="./public/icons/love.png" alt="favorites" /></a>
-            <a href=""><img src="./public/icons/user.png" alt="my-account" /></a>
+            <a href="">Cart</a>
+            <a href="./view/profile.php">My Profile</a>
           </div>
         </nav>
       </header>
@@ -96,7 +89,6 @@
         <div class="card-content">
           <p class="tag">Big Sale Products</p>
           <h3 class="title">Indoor Plants</h3>
-          <a href="" class="link">Shop Now</a>
         </div>
 
         <img src="./public/indoor-plant.png" class="plant-img" alt="" />
@@ -106,7 +98,6 @@
         <div class="card-content">
           <p class="tag">Top Products</p>
           <h3 class="title">Herbal Plants</h3>
-          <a href="" class="link">Shop Now</a>
         </div>
         <img src="./public/herbal-plant.png" class="plant-img" alt="" />
       </div>
@@ -121,83 +112,26 @@
           <li><a class="tag-element" href="">CUSTOMER FAVOURITES</a></li>
         </ul>
 
-        <div class="card">
-          <div class="img-container">
-            <button class="like-btn">
-              <img src="./public/icons/cart.png" alt="" />
-            </button>
-            <img src="./public/plants/plant-1.png" class="card-img" alt="" />
-          </div>
-          <div class="card-text">
-            <p class="label">Homalomena Rubescens</p>
-            <p class="price">9 €</p>
-          </div>
-        </div>
+        
+      <?php
+foreach ($plants as $plant) {
+    echo '<div class="card">';
+    echo '  <div class="img-container">';
+    echo '    <button class="like-btn"> action="add_to_cart" data-plant-id="' . htmlspecialchars($plant['id']) . '">';
+    echo '      <img src="./public/icons/cart.png" alt="" />';
+    echo '    </button>';
+    echo '    <img src="./public/plants/' . htmlspecialchars($plant['image_url']). '" class="card-img" alt="' . htmlspecialchars($plant['name']) . '" />';
+    echo '  </div>';
+    echo '  <div class="card-text">';
+    echo '    <p class="label">' . htmlspecialchars($plant['name']) . '</p>';
+    echo '    <p class="price">' . htmlspecialchars($plant['price']) . ' €</p>';
+    echo '  </div>';
+    echo '</div>';
+}
+?>
 
-        <div class="card">
-          <div class="img-container">
-            <button class="like-btn">
-              <img src="./public/icons/cart.png" alt="" />
-            </button>
-            <img src="./public/plants/plant-1.png" class="card-img" alt="" />
-          </div>
-          <div class="card-text">
-            <p class="label">Licuala Grandis</p>
-            <p class="price">18 €</p>
-          </div>
-        </div>
 
-        <div class="card">
-          <div class="img-container">
-            <button class="like-btn">
-              <img src="./public/icons/cart.png" alt="" />
-            </button>
-            <img src="./public/plants/plant-1.png" class="card-img" alt="" />
-          </div>
-          <div class="card-text">
-            <p class="label">Fiddle Leaf Fig</p>
-            <p class="price">13 €</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="img-container">
-            <button class="like-btn">
-              <img src="./public/icons/cart.png" alt="" />
-            </button>
-            <img src="./public/plants/plant-1.png" class="card-img" alt="" />
-          </div>
-          <div class="card-text">
-            <p class="label">Homalomena Rubescens</p>
-            <p class="price">9 €</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="img-container">
-            <button class="like-btn">
-              <img src="./public/icons/cart.png" alt="" />
-            </button>
-            <img src="./public/plants/plant-1.png" class="card-img" alt="" />
-          </div>
-          <div class="card-text">
-            <p class="label">Licuala Grandis</p>
-            <p class="price">18 €</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="img-container">
-            <button class="like-btn">
-              <img src="./public/icons/cart.png" alt="" />
-            </button>
-            <img src="./public/plants/plant-1.png" class="card-img" alt="" />
-          </div>
-          <div class="card-text">
-            <p class="label">Fiddle Leaf Fig</p>
-            <p class="price">13 €</p>
-          </div>
-        </div>
+      
       </div>
     </div>
 

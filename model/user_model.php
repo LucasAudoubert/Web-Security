@@ -64,3 +64,10 @@ function getAllUsers(PDO $pdo): array {
     $stmt = $pdo->query("SELECT id, first_name, last_name, email, role FROM users");
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
+
+//get user by id
+function getUserById(PDO $pdo, int $id) {
+    $stmt = $pdo->prepare("SELECT id, first_name, last_name, email FROM users WHERE id = :id LIMIT 1");
+    $stmt->execute(['id' => $id]);
+    return $stmt->fetch(PDO::FETCH_ASSOC) ?: null;
+}

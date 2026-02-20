@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+body{
+   margin: 0;
+    padding: 0;
+}
+
+.profile-page{
+    height: 100svh;
+     background: linear-gradient(
+    90deg,
+    rgb(34, 89, 50) 0%,
+    rgb(12, 53, 35) 50%,
+    rgb(34, 89, 50) 100%
+  );
+   
+}
+
+.profile-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  font-size:x-large;
+  height: 100svh;
+}
+
+h1{
+  color: white;
+  font-family: "Playfair Display", serif;
+
+
+}
+
+.info-card{
+  background-color: #dddddb;
+  padding: 30px;
+  border-radius: 25px;
+  font-family: "Elms Sans", sans-serif;
+}
+
+strong{
+  color:#e65e3f;
+}
+
+.back-link{
+  color: white;
+  font-size: x-large;
+  margin-left: 50px;
+  margin-top: 50px;
+  text-decoration: none;
+}
+
+.back-link:hover{
+  text-decoration: underline;
+}
