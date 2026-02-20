@@ -53,7 +53,7 @@ unset($_SESSION['success'], $_SESSION['error']);
         <!-- Section Ajouter Plante -->
         <div class="admin-section">
             <h2>➕ Ajouter une Nouvelle Plante</h2>
-            <form method="POST" action="../controller/plant/add.php">
+            <form method="POST" action="../controller/plant/add.php" enctype="multipart/form-data">
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
                     <div class="form-group">
                         <label for="name">Nom de la plante *</label>
@@ -74,8 +74,8 @@ unset($_SESSION['success'], $_SESSION['error']);
                         <input type="number" id="stock" name="stock" required min="0" placeholder="Ex: 10" />
                     </div>
                     <div class="form-group">
-                        <label for="image_url">URL Image</label>
-                        <input type="text" id="image_url" name="image_url" placeholder="public/plants/plant.png" />
+                        <label for="image">Image Plante</label>
+                        <input type="file" id="image" name="image" accept="image/*" placeholder="Sélectionnez une image" />
                     </div>
                 </div>
                 <div class="button-group">
