@@ -117,9 +117,13 @@
 foreach ($plants as $plant) {
     echo '<div class="card">';
     echo '  <div class="img-container">';
-    echo '    <button class="like-btn"> action="add_to_cart" data-plant-id="' . htmlspecialchars($plant['id']) . '">';
-    echo '      <img src="./public/icons/cart.png" alt="" />';
+    echo '<form action="../controllers/cart_controller.php" method="POST">';
+    echo '    <input type="hidden" name="action" value="add_to_cart">';
+    echo '    <input type="hidden" name="plant_id" value="' . htmlspecialchars($plant['id']) . '">';
+    echo '    <button type="submit" class="like-btn">';
+    echo '        <img src="./public/icons/cart.png" alt="" />';
     echo '    </button>';
+    echo '</form>';
     echo '    <img src="./public/plants/' . htmlspecialchars($plant['image_url']). '" class="card-img" alt="' . htmlspecialchars($plant['name']) . '" />';
     echo '  </div>';
     echo '  <div class="card-text">';
