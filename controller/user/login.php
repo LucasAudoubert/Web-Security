@@ -2,6 +2,11 @@
 session_start();
 require_once("../../model/user_model.php");
 
+if (isset($_SESSION['userID'])) {
+    header("Location: http://localhost/Web%20Security%20Project/");
+    exit();
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $email = trim($_POST['email'] ?? '');
@@ -22,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         echo "<p>Login successful</p>";
     var_dump($_SESSION);
-        header("Location: http://localhost/Web-Security/");
+        header("Location: http://localhost/Web%20Security%20Project/");
         // exit();
 
     } else {

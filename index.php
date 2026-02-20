@@ -32,6 +32,7 @@
             <a href="">Home</a>
             <a href="">Cart</a>
             <a href="./view/profile.php">My Profile</a>
+            <a href="./view/login.php"><img src="./public/icons/login.gif" alt=""></a>
           </div>
         </nav>
       </header>

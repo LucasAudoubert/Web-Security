@@ -13,10 +13,10 @@ function connectDB(): PDO {
 }
 
 //create
-function createPlant(PDO $pdo, string $name, string $description, floadt $price, int $stock, string $image_path): bool {
+function createPlant(PDO $pdo, string $name, string $description, float $price, int $stock, string $image_path): bool {
     $stmt = $pdo->prepare("
         INSERT INTO plants (name, description, price, stock, image_url)
-        VALUES (:name, :description, :image_path)
+        VALUES (:name, :description, :price, :stock, :image_url)
     ");
     return $stmt->execute([
         'name' => $name,
@@ -57,5 +57,22 @@ function updatePlantStock(PDO $pdo, int $id, int $new_stock): bool {
         'id' => $id,
         'stock' => $new_stock
     ]);
+}
+
+//update plant details
+function updatePlant(PDO $pdo, int $id, string $name, string $description, float $price): bool {
+    $stmt = $pdo->prepare("UPDATE plants SET name = :name, description = :description, price = :price WHERE id = :id");
+    return $stmt->execute([
+        'id' => $id,
+        'name' => $name,
+        'description' => $description,
+        'price' => $price
+    ]);
+}
+
+//delete plant
+function deletePlant(PDO $pdo, int $id): bool {
+    $stmt = $pdo->prepare("DELETE FROM plants WHERE id = :id");
+    return $stmt->execute(['id' => $id]);
 }
 
