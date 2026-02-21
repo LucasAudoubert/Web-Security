@@ -1,16 +1,6 @@
 <?php
-// user_model.php
-
-// Connect to database
-function connectDB(): PDO {
-    try {
-        $pdo = new PDO('mysql:host=localhost;dbname=botanica', 'root', '');
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        return $pdo;
-    } catch (PDOException $e) {
-        die("Erreur de connexion à la base de données : " . $e->getMessage());
-    }
-}
+require_once __DIR__ . '/../config.php';
+// Plant model functions
 
 //create
 function createPlant(PDO $pdo, string $name, string $description, float $price, int $stock, string $image_path): bool {

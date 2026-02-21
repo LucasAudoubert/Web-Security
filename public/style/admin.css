@@ -1,14 +1,26 @@
+@import '../style.css';
+
 .admin-container {
   max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
 }
+
+body {
+  height: auto;
+  display: block;
+  flex-direction: unset;
+  justify-content: unset;
+  align-items: unset;
+}
+
 .admin-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
   color: rgb(12, 53, 35);
+  position: static;
 }
 .admin-section {
   background: #f9fafb;
@@ -63,7 +75,7 @@
   color: white;
 }
 .btn-primary:hover {
-  background-color: #c8543a;
+  background-color: #3ac846;
 }
 .btn-danger {
   background-color: #dc2626;

@@ -21,9 +21,9 @@
         <h2>Personal Information</h2>
         <p><strong>Name:</strong> <?php echo htmlspecialchars($user['first_name'] . ' ' . $user['last_name']); ?></p>
         <p><strong>Email:</strong> <?php echo htmlspecialchars($user['email']); ?></p>
+        <a href="./logout.php">Logout<img src="../public/icons/logout.gif" alt="Logout"></a>
         </div>
 </div>
     </div>
-        
 </body>
 </html>
