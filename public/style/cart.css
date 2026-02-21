@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Elms Sans", sans-serif;
+    background: linear-gradient(
+        90deg,
+        rgb(34, 89, 50) 0%,
+        rgb(12, 53, 35) 50%,
+        rgb(34, 89, 50) 100%
+    );
+    min-height: 100svh;
+    text-align: center;
+}
+
+.cart-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px;
+    
+}
+
+h1 {
+    color: white;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cart-item {
+    background-color: #dddddb;
+    border-radius: 25px;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: large;
+}
+
+.cart-item p {
+    margin: 0;
+
+    color: #333;
+}
+
+.cart-item strong {
+    color: #e65e3f;
+}
+
+button {
+    background-color: #e65e3f;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #d04b2f;
+}
+
+.total-price {
+    font-weight: bold;
+    font-size: x-large;
+    color: #e65e3f;
+    text-align: right;
+}
+
+.remove-form {
+    display: inline;
+}
+
+.delete-order-form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.empty-cart {
+    color: white;
+    font-size: large;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a{
+    color: white;
+}

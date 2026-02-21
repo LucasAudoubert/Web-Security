@@ -30,7 +30,7 @@
         <nav class="main-menu">
           <div class="menu-items">
             <a href="">Home</a>
-            <a href="">Cart</a>
+            <a href="./view/cart.php">Cart</a>
             <a href="./view/profile.php">My Profile</a>
             <a href="./view/login.php"><img src="./public/icons/login.gif" alt=""></a>
           </div>
@@ -118,7 +118,7 @@
 foreach ($plants as $plant) {
     echo '<div class="card">';
     echo '  <div class="img-container">';
-    echo '<form action="../controllers/cart_controller.php" method="POST">';
+    echo '<form action="./controller/order/order.php" method="POST">';
     echo '    <input type="hidden" name="action" value="add_to_cart">';
     echo '    <input type="hidden" name="plant_id" value="' . htmlspecialchars($plant['id']) . '">';
     echo '    <button type="submit" class="like-btn">';
